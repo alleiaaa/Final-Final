@@ -22,16 +22,6 @@
         android:layout_marginTop="70dp"
         />
 
-    <ImageView
-        android:id="@+id/addIcon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="42dp"
-        android:contentDescription="Add Icon"
-        android:src="@drawable/baseline_add" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/ordersCard"
         android:layout_width="350dp"

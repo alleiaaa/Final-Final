@@ -55,6 +55,7 @@
         android:layout_marginEnd="20dp"
         android:orientation="vertical">
 
+      <!-- Help Center Introduction -->
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -95,43 +96,46 @@
               android:textColor="@color/grey"
               android:textSize="14sp" />
         </LinearLayout>
-
       </LinearLayout>
 
-      <TextView
-          android:id="@+id/textView28"
+      <!-- Welcome Section -->
+      <androidx.cardview.widget.CardView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="20dp"
-          android:fontFamily="@font/atyp_medium"
-          android:text="Welcome to TapNBite Help Center!"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
+          app:cardCornerRadius="8dp"
+          app:cardElevation="2dp"
+          app:cardUseCompatPadding="true">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/atyp_medium"
+              android:text="Welcome to TapNBite Help Center!"
+              android:textColor="@color/text"
+              android:textSize="15sp" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/atyp_regular"
+              android:lineSpacingExtra="3dp"
+              android:paddingTop="5dp"
+              android:text="@string/seller_help_welcome"
+              android:textColor="@color/text"
+              android:justificationMode="inter_word"
+              android:textSize="15sp" />
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Getting Started Section -->
       <TextView
-          android:id="@+id/textView29"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/atyp_regular"
-          android:lineSpacingExtra="3dp"
-          android:paddingTop="5dp"
-          android:paddingBottom="10dp"
-          android:text="@string/seller_help_welcome"
-          android:textColor="@color/text"
-          android:justificationMode="inter_word"
-          android:textSize="15sp" />
-
-
-
-      <View
-          android:id="@+id/divider5"
-          android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:layout_marginTop="10dp"
-          android:background="@color/grey" />
-
-      <TextView
-          android:id="@+id/textView21"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="20dp"
@@ -140,39 +144,76 @@
           android:textColor="@color/text"
           android:textSize="23sp" />
 
-      <TextView
-          android:id="@+id/textView30"
+      <androidx.cardview.widget.CardView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="15dp"
-          android:fontFamily="@font/atyp_medium"
-          android:text="How do I list my products?"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
+          android:layout_marginTop="12dp"
+          app:cardCornerRadius="8dp"
+          app:cardElevation="2dp"
+          app:cardUseCompatPadding="true">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+          <!-- Expandable Question 1 -->
+          <LinearLayout
+              android:id="@+id/header_listing_products"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="16dp"
+              android:background="?android:attr/selectableItemBackground"
+              android:clickable="true"
+              android:focusable="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atyp_medium"
+                android:text="How do I list my products?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/arrow_listing_products"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down" />
+          </LinearLayout>
+
+          <!-- Expandable Content 1 -->
+          <LinearLayout
+              android:id="@+id/content_listing_products"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:visibility="gone"
+              android:padding="16dp"
+              android:paddingTop="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:lineSpacingExtra="3dp"
+                android:justificationMode="inter_word"
+                android:text="@string/seller_account_setup"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+          </LinearLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/grey" />
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Managing Orders and Inventory Section -->
       <TextView
-          android:id="@+id/textView31"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/atyp_regular"
-          android:paddingTop="5dp"
-          android:lineSpacingExtra="3dp"
-          android:paddingBottom="10dp"
-          android:justificationMode="inter_word"
-          android:text="@string/seller_account_setup"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-
-      <View
-          android:id="@+id/divider6"
-          android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:layout_marginTop="10dp"
-          android:background="@color/grey" />
-
-      <TextView
-          android:id="@+id/textView37"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="20dp"
@@ -181,63 +222,124 @@
           android:textColor="@color/text"
           android:textSize="23sp" />
 
-      <TextView
-          android:id="@+id/textView40"
+      <androidx.cardview.widget.CardView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="15dp"
-          android:fontFamily="@font/atyp_medium"
-          android:text= "How do I manage incoming orders?"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
+          android:layout_marginTop="12dp"
+          app:cardCornerRadius="8dp"
+          app:cardElevation="2dp"
+          app:cardUseCompatPadding="true">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+          <!-- Expandable Question 2 -->
+          <LinearLayout
+              android:id="@+id/header_manage_orders"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="16dp"
+              android:background="?android:attr/selectableItemBackground"
+              android:clickable="true"
+              android:focusable="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atyp_medium"
+                android:text="How do I manage incoming orders?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/arrow_manage_orders"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down" />
+          </LinearLayout>
+
+          <!-- Expandable Content 2 -->
+          <LinearLayout
+              android:id="@+id/content_manage_orders"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:visibility="gone"
+              android:padding="16dp"
+              android:paddingTop="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:lineSpacingExtra="3dp"
+                android:justificationMode="inter_word"
+                android:text="@string/seller_order_management"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+          </LinearLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/grey" />
+
+          <!-- Expandable Question 3 -->
+          <LinearLayout
+              android:id="@+id/header_update_menu"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="16dp"
+              android:background="?android:attr/selectableItemBackground"
+              android:clickable="true"
+              android:focusable="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Can I update my menu or inventory?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/arrow_update_menu"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down" />
+          </LinearLayout>
+
+          <!-- Expandable Content 3 -->
+          <LinearLayout
+              android:id="@+id/content_update_menu"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:visibility="gone"
+              android:padding="16dp"
+              android:paddingTop="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:lineSpacingExtra="3dp"
+                android:justificationMode="inter_word"
+                android:text="@string/seller_menu_updates"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+          </LinearLayout>
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Payments and Financial Management Section -->
       <TextView
-          android:id="@+id/textView41"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/atyp_regular"
-          android:justificationMode="inter_word"
-          android:paddingTop="5dp"
-          android:paddingBottom="10dp"
-
-          android:paddingEnd="5dp"
-          android:text="@string/seller_order_management"
-          android:textColor="@color/text"
-          android:lineSpacingExtra="3dp"
-          android:textSize="15sp" />
-
-      <TextView
-          android:id="@+id/textView42"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="15dp"
-          android:fontFamily="@font/atyp_medium"
-          android:text="Can I update my menu or inventory?"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-      <TextView
-          android:id="@+id/textView43"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/atyp_regular"
-          android:justificationMode="inter_word"
-          android:lineSpacingExtra="3dp"
-          android:paddingTop="5dp"
-          android:paddingBottom="10dp"
-          android:text="@string/seller_menu_updates"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-      <View
-          android:id="@+id/divider8"
-          android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:layout_marginTop="10dp"
-          android:background="@color/grey" />
-
-      <TextView
-          android:id="@+id/textView44"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="20dp"
@@ -246,62 +348,124 @@
           android:textColor="@color/text"
           android:textSize="23sp" />
 
-      <TextView
-          android:id="@+id/textView45"
+      <androidx.cardview.widget.CardView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="15dp"
-          android:fontFamily="@font/atyp_medium"
-          android:text="How do I receive payments?"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
+          android:layout_marginTop="12dp"
+          app:cardCornerRadius="8dp"
+          app:cardElevation="2dp"
+          app:cardUseCompatPadding="true">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+          <!-- Expandable Question 4 -->
+          <LinearLayout
+              android:id="@+id/header_receive_payments"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="16dp"
+              android:background="?android:attr/selectableItemBackground"
+              android:clickable="true"
+              android:focusable="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atyp_medium"
+                android:text="How do I receive payments?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/arrow_receive_payments"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down" />
+          </LinearLayout>
+
+          <!-- Expandable Content 4 -->
+          <LinearLayout
+              android:id="@+id/content_receive_payments"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:visibility="gone"
+              android:padding="16dp"
+              android:paddingTop="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:lineSpacingExtra="3dp"
+                android:justificationMode="inter_word"
+                android:text="@string/seller_payments"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+          </LinearLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/grey" />
+
+          <!-- Expandable Question 5 -->
+          <LinearLayout
+              android:id="@+id/header_sales_performance"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="16dp"
+              android:background="?android:attr/selectableItemBackground"
+              android:clickable="true"
+              android:focusable="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Can I view my sales performance?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/arrow_sales_performance"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down" />
+          </LinearLayout>
+
+          <!-- Expandable Content 5 -->
+          <LinearLayout
+              android:id="@+id/content_sales_performance"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:visibility="gone"
+              android:padding="16dp"
+              android:paddingTop="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:lineSpacingExtra="3dp"
+                android:justificationMode="inter_word"
+                android:text="@string/seller_sales_analytics"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+          </LinearLayout>
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Troubleshooting and Support Section -->
       <TextView
-          android:id="@+id/textView46"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/atyp_regular"
-          android:justificationMode="inter_word"
-          android:lineSpacingExtra="3dp"
-          android:paddingTop="5dp"
-          android:paddingBottom="10dp"
-          android:text="@string/seller_payments"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-      <TextView
-          android:id="@+id/textView49"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="15dp"
-          android:fontFamily="@font/atyp_medium"
-          android:text="Can I view my sales performance?"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-      <TextView
-          android:id="@+id/textView50"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/atyp_regular"
-          android:justificationMode="inter_word"
-          android:lineSpacingExtra="3dp"
-          android:paddingTop="5dp"
-          android:paddingBottom="10dp"
-          android:text="@string/seller_sales_analytics"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-
-      <View
-          android:id="@+id/divider9"
-          android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:layout_marginTop="10dp"
-          android:background="@color/grey" />
-
-      <TextView
-          android:id="@+id/textView51"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="20dp"
@@ -310,61 +474,124 @@
           android:textColor="@color/text"
           android:textSize="23sp" />
 
-      <TextView
-          android:id="@+id/textView52"
+      <androidx.cardview.widget.CardView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="15dp"
-          android:fontFamily="@font/atyp_medium"
-          android:text="What should I do if I encounter technical issues?"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
+          android:layout_marginTop="12dp"
+          app:cardCornerRadius="8dp"
+          app:cardElevation="2dp"
+          app:cardUseCompatPadding="true">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+          <!-- Expandable Question 6 -->
+          <LinearLayout
+              android:id="@+id/header_technical_issues"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="16dp"
+              android:background="?android:attr/selectableItemBackground"
+              android:clickable="true"
+              android:focusable="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atyp_medium"
+                android:text="What should I do if I encounter technical issues?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/arrow_technical_issues"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down" />
+          </LinearLayout>
+
+          <!-- Expandable Content 6 -->
+          <LinearLayout
+              android:id="@+id/content_technical_issues"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:visibility="gone"
+              android:padding="16dp"
+              android:paddingTop="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:lineSpacingExtra="3dp"
+                android:justificationMode="inter_word"
+                android:text="@string/seller_technical_support"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+          </LinearLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/grey" />
+
+          <!-- Expandable Question 7 -->
+          <LinearLayout
+              android:id="@+id/header_report_fraud"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="16dp"
+              android:background="?android:attr/selectableItemBackground"
+              android:clickable="true"
+              android:focusable="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atyp_medium"
+                android:text="How do I report fraudulent activity?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/arrow_report_fraud"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down" />
+          </LinearLayout>
+
+          <!-- Expandable Content 7 -->
+          <LinearLayout
+              android:id="@+id/content_report_fraud"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:visibility="gone"
+              android:padding="16dp"
+              android:paddingTop="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:lineSpacingExtra="3dp"
+                android:justificationMode="inter_word"
+                android:text="@string/seller_fraud_prevention"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+          </LinearLayout>
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Policies and Guidelines Section -->
       <TextView
-          android:id="@+id/textView53"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/atyp_regular"
-          android:justificationMode="inter_word"
-          android:lineSpacingExtra="3dp"
-          android:paddingTop="5dp"
-          android:paddingBottom="10dp"
-          android:text="@string/seller_technical_support"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-      <TextView
-          android:id="@+id/textView54"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="15dp"
-          android:fontFamily="@font/atyp_medium"
-          android:text="How do I report fraudulent activity?"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-      <TextView
-          android:id="@+id/textView55"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/atyp_regular"
-          android:justificationMode="inter_word"
-          android:lineSpacingExtra="3dp"
-          android:paddingTop="5dp"
-          android:paddingBottom="10dp"
-          android:text="@string/seller_fraud_prevention"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-      <View
-          android:id="@+id/divider10"
-          android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:layout_marginTop="10dp"
-          android:background="@color/grey" />
-
-      <TextView
-          android:id="@+id/textView56"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="20dp"
@@ -373,61 +600,124 @@
           android:textColor="@color/text"
           android:textSize="23sp" />
 
-      <TextView
-          android:id="@+id/textView57"
+      <androidx.cardview.widget.CardView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="15dp"
-          android:fontFamily="@font/atyp_medium"
-          android:text="What are the selling policies on TapNBite?"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
+          android:layout_marginTop="12dp"
+          app:cardCornerRadius="8dp"
+          app:cardElevation="2dp"
+          app:cardUseCompatPadding="true">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+          <!-- Expandable Question 8 -->
+          <LinearLayout
+              android:id="@+id/header_selling_policies"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="16dp"
+              android:background="?android:attr/selectableItemBackground"
+              android:clickable="true"
+              android:focusable="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atyp_medium"
+                android:text="What are the selling policies on TapNBite?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/arrow_selling_policies"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down" />
+          </LinearLayout>
+
+          <!-- Expandable Content 8 -->
+          <LinearLayout
+              android:id="@+id/content_selling_policies"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:visibility="gone"
+              android:padding="16dp"
+              android:paddingTop="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:lineSpacingExtra="3dp"
+                android:justificationMode="inter_word"
+                android:text="@string/seller_responsibilities"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+          </LinearLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/grey" />
+
+          <!-- Expandable Question 9 -->
+          <LinearLayout
+              android:id="@+id/header_outside_payments"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="16dp"
+              android:background="?android:attr/selectableItemBackground"
+              android:clickable="true"
+              android:focusable="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atyp_medium"
+                android:text="Can I accept payments outside the app?"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/arrow_outside_payments"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down" />
+          </LinearLayout>
+
+          <!-- Expandable Content 9 -->
+          <LinearLayout
+              android:id="@+id/content_outside_payments"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:visibility="gone"
+              android:padding="16dp"
+              android:paddingTop="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atyp_regular"
+                android:lineSpacingExtra="3dp"
+                android:justificationMode="inter_word"
+                android:text="@string/seller_transaction_policy"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+          </LinearLayout>
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Direct Support Options Section -->
       <TextView
-          android:id="@+id/textView58"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/atyp_regular"
-          android:justificationMode="inter_word"
-          android:lineSpacingExtra="3dp"
-          android:paddingTop="5dp"
-          android:paddingBottom="10dp"
-          android:text="@string/seller_responsibilities"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-      <TextView
-          android:id="@+id/textView59"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="15dp"
-          android:fontFamily="@font/atyp_medium"
-          android:text="Can I accept payments outside the app?"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-      <TextView
-          android:id="@+id/textView60"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/atyp_regular"
-          android:justificationMode="inter_word"
-          android:lineSpacingExtra="3dp"
-          android:paddingTop="5dp"
-          android:paddingBottom="10dp"
-          android:text="@string/seller_transaction_policy"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
-
-      <View
-          android:id="@+id/divider11"
-          android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:layout_marginTop="10dp"
-          android:background="@color/grey" />
-
-      <TextView
-          android:id="@+id/textView61"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="20dp"
@@ -436,38 +726,41 @@
           android:textColor="@color/text"
           android:textSize="23sp" />
 
-      <TextView
-          android:id="@+id/textView62"
+      <androidx.cardview.widget.CardView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="15dp"
-          android:fontFamily="@font/atyp_medium"
-          android:text="Need further assistance? Here’s how to get in touch:"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
+          android:layout_marginTop="12dp"
+          android:layout_marginBottom="30dp"
+          app:cardCornerRadius="8dp"
+          app:cardElevation="2dp"
+          app:cardUseCompatPadding="true">
 
-      <TextView
-          android:id="@+id/textView63"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/atyp_regular"
-          android:justificationMode="inter_word"
-          android:lineSpacingExtra="3dp"
-          android:paddingTop="5dp"
-          android:paddingBottom="10dp"
-          android:text="@string/seller_email_support"
-          android:textColor="@color/text"
-          android:textSize="15sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-      <View
-          android:id="@+id/divider12"
-          android:layout_width="match_parent"
-          android:layout_height="30dp"
-          android:layout_marginTop="10dp"
-          android:background="@color/light_2.0" />
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/atyp_medium"
+              android:text="Need further assistance? Here's how to get in touch:"
+              android:textColor="@color/text"
+              android:textSize="15sp" />
 
-
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/atyp_regular"
+              android:lineSpacingExtra="3dp"
+              android:paddingTop="5dp"
+              android:text="@string/seller_email_support"
+              android:textColor="@color/text"
+              android:justificationMode="inter_word"
+              android:textSize="15sp" />
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
     </LinearLayout>
   </ScrollView>
-
 </RelativeLayout>
