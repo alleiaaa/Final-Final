@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/txtOrderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order #001"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#232946"/>
+
+    <TextView
+        android:id="@+id/txtCanteen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canteen 1"
+        android:textSize="14sp"
+        android:textColor="#404040"/>
+
+    <TextView
+        android:id="@+id/txtAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₱500"
+        android:textSize="14sp"
+        android:textColor="#232946"
+        android:textStyle="bold"/>
+</LinearLayout>

@@ -27,7 +27,7 @@ public class HelpCenter extends AppCompatActivity {
         });
 
         // Initialize expandable sections
-        setupExpandableSection(R.id.header_listing_products, R.id.content_listing_products, R.id.arrow_listing_products);
+        setupExpandableSection(R.id.listingProducts, R.id.content_listingProducts, R.id.arrow_listingProducts);
         setupExpandableSection(R.id.header_manage_orders, R.id.content_manage_orders, R.id.arrow_manage_orders);
         setupExpandableSection(R.id.header_update_menu, R.id.content_update_menu, R.id.arrow_update_menu);
         setupExpandableSection(R.id.header_receive_payments, R.id.content_receive_payments, R.id.arrow_receive_payments);

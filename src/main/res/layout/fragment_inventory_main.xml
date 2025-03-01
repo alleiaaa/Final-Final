@@ -14,9 +14,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="INVENTORY"
-        android:fontFamily="@font/atyp_medium"
+        android:fontFamily="@font/inter_semibold"
         android:textColor="#232946"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp" />
@@ -56,10 +56,10 @@
                 android:layout_below="@id/menuIcon"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/atyp_medium"
+                android:fontFamily="@font/inter_medium"
                 android:text="MENU"
                 android:textColor="#232946"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -98,10 +98,10 @@
                 android:layout_below="@id/stockIcon"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/atyp_medium"
+                android:fontFamily="@font/inter_medium"
                 android:text="STOCK"
                 android:textColor="#232946"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

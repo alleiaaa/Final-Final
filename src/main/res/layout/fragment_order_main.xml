@@ -14,9 +14,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SALES"
-        android:fontFamily="@font/atyp_medium"
+        android:fontFamily="@font/inter_semibold"
         android:textColor="#232946"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
@@ -55,10 +55,10 @@
                 android:layout_below="@id/ordersIcon"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/atyp_medium"
+                android:fontFamily="@font/inter_medium"
                 android:text="ORDERS"
                 android:textColor="#232946"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -86,11 +86,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/reports"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/atyp_medium"
+                android:fontFamily="@font/inter_medium"
                 android:layout_centerHorizontal="true"
                 android:text="REPORTS"
                 android:textColor="#232946"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView

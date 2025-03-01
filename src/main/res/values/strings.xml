@@ -27,10 +27,47 @@
     <string name="edit_name">Edit Name</string>
     <string name="edit_price">Edit Price</string>
     <string name="delete_product">Delete Product</string>
+    <string name="goback">goBack</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="todo">TODO</string>
+    <string name="last_update_11_january_2025">Last Update: 11 January 2025</string>
+    <string name="data_collection_and_purpose">Data Collection and Purpose</string>
+    <string name="security_and_confidentiality">Security and Confidentiality</string>
+    <string name="operation_data_and_transparency">Operation Data and Transparency</string>
+    <string name="compliance_and_accountability">Compliance and Accountability</string>
+    <string name="help_center">HELP CENTER</string>
+    <string name="getting_started">Getting Started</string>
+    <string name="how_do_i_list_my_products">How do I list my products?</string>
+    <string name="managing_orders_and_inventory">Managing Orders and Inventory</string>
+    <string name="how_do_i_manage_incoming_orders">How do I manage incoming orders?</string>
+    <string name="can_i_update_my_menu_or_inventory">Can I update my menu or inventory?</string>
+    <string name="how_do_i_receive_payments">How do I receive payments?</string>
+    <string name="can_i_view_my_sales_performance">Can I view my sales performance?</string>
+    <string name="troubleshooting_and_support">Troubleshooting and Support</string>
+    <string name="payments_and_financial_management">Payments and Financial Management</string>
+    <string name="what_should_i_do_if_i_encounter_technical_issues">What should I do if I encounter technical issues?</string>
+    <string name="how_do_i_report_fraudulent_activity">How do I report fraudulent activity?</string>
+    <string name="policies_and_guidelines">Policies and Guidelines</string>
+    <string name="what_are_the_selling_policies_on_tapnbite">What are the selling policies on TapNBite?</string>
+    <string name="can_i_accept_payments_outside_the_app">Can I accept payments outside the app?</string>
+    <string name="direct_support_options">Direct Support Options</string>
+    <string name="need_further_assistance_here_s_how_to_get_in_touch">Need further assistance? Here\'s how to get in touch:</string>
+    <string name="store_settings">STORE SETTINGS</string>
+    <string name="store_information">Store Information</string>
+    <string name="seller_account_and_access">Seller Account and Access</string>
+    <string name="order_management_and_updates">Order Management and Updates</string>
+    <string name="payments_and_transactions">Payments and Transactions</string>
+    <string name="operational_flexibility_and_notifications">Operational Flexibility and Notifications</string>
 
     <string-array name="categories">
         <item>Rice Meals</item>
         <item>Drinks</item>
         <item>Snacks</item>
+    </string-array>
+    <string-array name="canteen_options">
+        <item>All Canteens</item>
+        <item>Canteen 1</item>
+        <item>Canteen 2</item>
+        <item>Canteen 3</item>
     </string-array>
 </resources>

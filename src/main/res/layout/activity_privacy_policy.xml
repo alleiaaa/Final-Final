@@ -5,40 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".settingsContent.PrivacyPolicy">
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@drawable/gradient_custom">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:id="@+id/btnBack"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="#0000"
-                android:contentDescription="goBack"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.04"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.41000003"
-                app:srcCompat="@drawable/ic_goback" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </FrameLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/frameLayout">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,166 +19,161 @@
             android:layout_marginEnd="20dp"
             android:orientation="vertical">
 
+            <!-- Header with Back Button and Privacy Policy Title -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#0000"
+                    android:contentDescription="@string/goback"
+                    app:srcCompat="@drawable/ic_goback_blue" />
 
                 <TextView
                     android:id="@+id/textView20"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/atyp_medium"
-                    android:text="Privacy Policy"
-                    android:textColor="@color/text"
-                    android:textSize="26sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="3dp">
-
-                    <ImageView
-                        android:id="@+id/imageView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_update" />
-
-                    <TextView
-                        android:id="@+id/textView25"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/atyp_medium"
-                        android:paddingStart="3dp"
-                        android:paddingTop="3dp"
-                        android:paddingBottom="4dp"
-                        android:text="Last Update: 11 January 2025"
-                        android:textColor="@color/grey"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/privacy_policy"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textColor="@color/dark"
+                    android:textSize="26sp"
+                    android:layout_marginEnd="36dp"/>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView26"
+            <!-- Last Update Section -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/atyp_medium"
-                android:text="@string/privacy_header"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
+                android:orientation="horizontal"
+                android:padding="3dp"
+                tools:ignore="UseCompoundDrawables">
 
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/ic_update" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter_semibold"
+                    android:paddingStart="3dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/last_update_11_january_2025"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+            <!-- Data Collection and Purpose -->
             <TextView
                 android:id="@+id/textView28"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semi_bold"
-                android:text="1. Data Collection and Purpose"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/data_collection_and_purpose"
+                android:textColor="@color/dark"
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/textView29"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
+                android:fontFamily="@font/inter_regular"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="@string/data_body"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
+                android:lineSpacingExtra="8dp"
+                android:lineSpacingMultiplier="1.0"
+                android:textColor="@color/dark"
+                android:textSize="18sp" />
 
-            <View
-                android:id="@+id/divider5"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/grey" />
-
+            <!-- Security and Confidentiality -->
             <TextView
                 android:id="@+id/textView30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semi_bold"
-                android:text="2. Security and Confidentiality"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/security_and_confidentiality"
+                android:textColor="@color/dark"
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/textView31"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
+                android:fontFamily="@font/inter_regular"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="@string/security_body"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
+                android:lineSpacingExtra="8dp"
+                android:lineSpacingMultiplier="1.0"
+                android:textColor="@color/dark"
+                android:textSize="18sp" />
 
-            <View
-                android:id="@+id/divider6"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/grey" />
-
+            <!-- Operation Data and Transparency -->
             <TextView
                 android:id="@+id/textView32"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semi_bold"
-                android:text="3. Operation Data and Transparency"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/operation_data_and_transparency"
+                android:textColor="@color/dark"
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/textView33"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
+                android:fontFamily="@font/inter_regular"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="@string/operations_body"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
+                android:lineSpacingExtra="8dp"
+                android:lineSpacingMultiplier="1.0"
+                android:textColor="@color/dark"
+                android:textSize="18sp" />
 
-            <View
-                android:id="@+id/divider7"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/grey" />
-
+            <!-- Compliance and Accountability -->
             <TextView
                 android:id="@+id/textView34"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:fontFamily="@font/atyp_semi_bold"
-                android:text="4. Compliance and Accountability"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/compliance_and_accountability"
+                android:textColor="@color/dark"
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/textView35"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/atyp_regular"
+                android:fontFamily="@font/inter_regular"
                 android:paddingTop="10dp"
                 android:paddingBottom="100dp"
                 android:text="@string/compliance_body"
-                android:textColor="@color/text"
-                android:textSize="15sp" />
-
-
+                android:lineSpacingExtra="8dp"
+                android:lineSpacingMultiplier="1.0"
+                android:textColor="@color/dark"
+                android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
-
 </RelativeLayout>

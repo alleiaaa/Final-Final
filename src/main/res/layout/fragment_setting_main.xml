@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:text="SETTINGS"
         android:textColor="#232946"
-        android:textSize="20sp"
-        android:fontFamily="@font/atyp_medium"
+        android:textSize="25sp"
+        android:fontFamily="@font/inter_semibold"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp" />
@@ -52,7 +52,7 @@
                         android:id="@+id/storeStatus"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/atyp_semi_bold"
+                        android:fontFamily="@font/inter_semibold"
                         android:text="Store Status"
                         android:textColor="#232946"
                         android:textSize="17sp" />
@@ -62,7 +62,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
-                        android:fontFamily="@font/atyp_medium"
+                        android:fontFamily="@font/inter_medium"
                         android:text="Currently Open"
                         android:textColor="#868686"
                         android:textSize="16sp" />
@@ -71,8 +71,8 @@
                         android:id="@+id/operatingHours"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:fontFamily="@font/atyp_semi_bold"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/inter_semibold"
                         android:text="Operating Hours"
                         android:textColor="#232946"
                         android:textSize="17sp" />
@@ -82,7 +82,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="24dp"
                         android:layout_marginTop="3dp"
-                        android:fontFamily="@font/atyp_medium"
+                        android:fontFamily="@font/inter_medium"
                         android:text="7:00 am - 5:00 pm"
                         android:textColor="#868686"
                         android:textSize="16sp" />
@@ -180,7 +180,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="18dp"
                 android:paddingTop="3dp"
-                android:fontFamily="@font/atyp_medium"
+                android:fontFamily="@font/inter_medium"
                 android:textSize="16.5dp"
                 android:textColor="#232946"
                 android:text="Store Settings" />
@@ -240,7 +240,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="18dp"
                 android:paddingTop="3dp"
-                android:fontFamily="@font/atyp_medium"
+                android:fontFamily="@font/inter_medium"
                 android:textSize="16.5dp"
                 android:textColor="#232946"
                 android:text="Help Center" />
@@ -286,7 +286,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="18dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/atyp_medium"
+                android:fontFamily="@font/inter_medium"
                 android:paddingTop="3dp"
                 android:text="Terms and Conditions"
                 android:textColor="#232946"
@@ -333,7 +333,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="18dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/atyp_medium"
+                android:fontFamily="@font/inter_medium"
                 android:paddingTop="3dp"
                 android:text="Privacy Policy"
                 android:textColor="#232946"
@@ -380,7 +380,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="18dp"
                 android:paddingTop="3dp"
-                android:fontFamily="@font/atyp_medium"
+                android:fontFamily="@font/inter_medium"
                 android:textSize="16.5dp"
                 android:textColor="#FFA01E"
                 android:text="Logout" />

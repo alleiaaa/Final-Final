@@ -4,15 +4,18 @@
     <item
         android:id="@+id/nav_sales"
         android:icon="@drawable/baseline_point_of_sale_24"
+        android:fontFamily="@font/inter_medium"
         android:title="Sales" />
 
     <item
         android:id="@+id/nav_inventory"
         android:icon="@drawable/baseline_inventory"
+        android:fontFamily="@font/inter_medium"
         android:title="Inventory" />
 
     <item
         android:id="@+id/nav_settings"
+        android:fontFamily="@font/inter_medium"
         android:icon="@drawable/baseline_setting"
         android:title="Settings" />
 
