@@ -57,9 +57,10 @@
         android:layout_margin="16dp"
         android:hint="Search"
         android:fontFamily="@font/inter_semibold"
-        android:inputType="text" />
+        android:inputType="text"
+        android:background="@drawable/searc_bar_background"
+        android:padding="12dp" />
 
-    <!-- TabLayout with custom indicator color and font -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"

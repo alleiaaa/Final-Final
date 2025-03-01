@@ -21,4 +21,18 @@
     <item name="fragment_container" type="id" />
     <item name="bottom_navigation" type="id" />
     <item name="edit_stock" type="id" />
+    <item name="statusBar" type="id" />
+    <item name="toolbar" type="id" />
+    <item name="mainTabLayout" type="id" />
+    <item name="tabStock" type="id" />
+    <item name="tabWaste" type="id" />
+    <item name="categoryTabLayout" type="id" />
+    <item name="tabAll" type="id" />
+    <item name="tabRiceMeals" type="id" />
+    <item name="tabSnacks" type="id" />
+    <item name="tabDrinks" type="id" />
+    <item name="listHeader" type="id" />
+    <item name="recyclerInventory" type="id" />
+    <item name="summaryCard" type="id" />
+    <item name="fabAdd" type="id" />
 </resources>
