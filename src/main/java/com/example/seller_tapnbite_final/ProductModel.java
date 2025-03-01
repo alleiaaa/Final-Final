@@ -26,6 +26,7 @@ public class ProductModel {
         this.isAvailable = isAvailable;
     }
 
+
     public ProductModel(String productName, double price, String productStock, String selectedCategory) {
     }
 

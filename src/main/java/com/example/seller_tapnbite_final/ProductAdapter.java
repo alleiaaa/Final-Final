@@ -48,6 +48,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         holder.foodName.setText(product.getName());
         holder.foodPrice.setText(String.format(Locale.getDefault(), "%d Pellets", (int)product.getPrice()));
+
         holder.foodStock.setText(String.format(Locale.getDefault(), "Stock: %d", product.getStock()));
         holder.foodStatus.setText(product.isAvailable() ? "Available" : "Unavailable");
 
@@ -57,12 +58,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         holder.optionsButton.setOnClickListener(v -> showPopupMenu(v, product));
 
-        holder.stockButton.setOnClickListener(v -> actionListener.onEditStock(product));
-
-        // **Make sure stock updates instantly in RecyclerView**
-        holder.itemView.post(() -> notifyItemChanged(position));
     }
-
 
     private void showPopupMenu(View view, ProductModel product) {
         PopupMenu popup = new PopupMenu(context, view);
@@ -78,7 +74,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
                 actionListener.onEditPrice(product);
                 return true;
             } else if (itemId == R.id.edit_stock) {
-                actionListener.onEditPrice(product);
+                actionListener.onEditStock(product);
                 return true;
             } else if (itemId == R.id.delete) {
                 showDeleteConfirmationDialog(product);
@@ -130,8 +126,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         TextView foodStatus;
         TextView foodStock;
         ImageButton optionsButton;
-        Button editButton;
-        Button stockButton;
+
 
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);

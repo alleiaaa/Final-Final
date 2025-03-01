@@ -48,7 +48,6 @@ public class SnacksFragment extends Fragment implements ProductAdapter.OnProduct
         ProductModel newProduct = new ProductModel(name, price, "Rice Meals", 15, true);
         newProduct.setImageResourceId(R.drawable.adobo); // Default image, change as needed
         productAdapter.addProduct(newProduct);
-        refreshProducts();
     }
 
     @Override
@@ -68,20 +67,16 @@ public class SnacksFragment extends Fragment implements ProductAdapter.OnProduct
 
     @Override
     public void onDeleteProduct(ProductModel product) {
-        productList.remove(product);
-        refreshProducts();
         Toast.makeText(getContext(), "Product Deleted", Toast.LENGTH_SHORT).show();
     }
 
     public void addProduct(ProductModel product) {
-        productList.add(product);
-        refreshProducts();
-    }
-
-    public void refreshProducts() {
-        if (productAdapter != null) {
-            productAdapter.notifyDataSetChanged();
+        // Set a default image if none is specified
+        if (product.getImageResourceId() == 0) {
+            product.setImageResourceId(R.drawable.adobo); // or another appropriate default
         }
+        productList.add(product);
+        productAdapter.notifyItemInserted(productList.size() - 1);
     }
 
     private void showEditDialog(ProductModel product, String editType) {
@@ -128,7 +123,6 @@ public class SnacksFragment extends Fragment implements ProductAdapter.OnProduct
                             break;
                     }
                     productAdapter.updateProduct(product);
-                    refreshProducts();
                     dialog.dismiss();
                 } catch (NumberFormatException e) {
                     Toast.makeText(getContext(), "Invalid input", Toast.LENGTH_SHORT).show();
@@ -142,4 +136,5 @@ public class SnacksFragment extends Fragment implements ProductAdapter.OnProduct
 
         dialog.show();
     }
+
 }

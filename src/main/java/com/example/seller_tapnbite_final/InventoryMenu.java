@@ -97,7 +97,6 @@ public class InventoryMenu extends AppCompatActivity {
             }
 
             dialog.dismiss();
-            updateTabs();
         });
 
         btnCancel.setOnClickListener(v -> dialog.dismiss());
@@ -121,22 +120,6 @@ public class InventoryMenu extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    private void updateTabs() {
-        ViewPager viewPager = findViewById(R.id.viewPager);
-        ViewPagerAdapter adapter = (ViewPagerAdapter) viewPager.getAdapter();
-
-        if (adapter != null) {
-            for (Fragment fragment : adapter.fragmentList) {
-                if (fragment instanceof RiceMealsFragment) {
-                    ((RiceMealsFragment) fragment).refreshProducts();
-                } else if (fragment instanceof DrinksFragment) {
-                    ((DrinksFragment) fragment).refreshProducts();
-                } else if (fragment instanceof SnacksFragment) {
-                    ((SnacksFragment) fragment).refreshProducts();
-                }
-            }
-        }
-    }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> fragmentList = new ArrayList<>();
