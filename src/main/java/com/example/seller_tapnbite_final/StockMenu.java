@@ -1,9 +1,15 @@
 package com.example.seller_tapnbite_final;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,17 +35,25 @@ public class StockMenu extends AppCompatActivity {
         tabStock = findViewById(R.id.tabStock);
         tabWaste = findViewById(R.id.tabWaste);
         recyclerInventory = findViewById(R.id.recyclerInventory);
+        ImageButton addItemButton = findViewById(R.id.addItem);
 
         recyclerInventory.setLayoutManager(new LinearLayoutManager(this));
+
+        // Load Sample Data BEFORE setting the adapter
+        populateSampleData();
+
         stockAdapter = new StockAdapter(stockList);
         recyclerInventory.setAdapter(stockAdapter);
 
-        // Sample Data
-        populateSampleData();
+        // Ensure the correct tab is shown at launch
+        switchTab(true);
 
         // Tab Click Listeners
         tabStock.setOnClickListener(view -> switchTab(true));
         tabWaste.setOnClickListener(view -> switchTab(false));
+
+        // Add Item Button Click
+        addItemButton.setOnClickListener(view -> showAddItemDialog());
     }
 
     private void switchTab(boolean isStock) {
@@ -64,7 +78,43 @@ public class StockMenu extends AppCompatActivity {
         wasteList.add(new InventoryItem("Expired Soda", "Drink", 10));
     }
 
-    // Static InventoryItem Class
+    private void showAddItemDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_add_item, null);
+        builder.setView(dialogView);
+
+        EditText itemNameInput = dialogView.findViewById(R.id.itemNameInput);
+        Spinner categorySpinner = dialogView.findViewById(R.id.categorySpinner);
+        EditText quantityInput = dialogView.findViewById(R.id.quantityInput);
+        RadioGroup radioGroupTab = dialogView.findViewById(R.id.radioGroupTab);
+        Button addButton = dialogView.findViewById(R.id.addButton);
+        Button cancelButton = dialogView.findViewById(R.id.cancelButton);
+
+        AlertDialog dialog = builder.create();
+
+        addButton.setOnClickListener(view -> {
+            String name = itemNameInput.getText().toString();
+            String category = categorySpinner.getSelectedItem().toString();
+            int quantity = Integer.parseInt(quantityInput.getText().toString());
+
+            if (radioGroupTab.getCheckedRadioButtonId() == R.id.radioStock) {
+                stockList.add(new InventoryItem(name, category, quantity));
+            } else {
+                wasteList.add(new InventoryItem(name, category, quantity));
+            }
+
+            stockAdapter.notifyDataSetChanged();
+            dialog.dismiss();
+        });
+
+        cancelButton.setOnClickListener(view -> dialog.dismiss());
+
+        dialog.show();
+    }
+
+
+    // Inventory Item Class
     static class InventoryItem {
         String name, category;
         int quantity;
@@ -73,52 +123,6 @@ public class StockMenu extends AppCompatActivity {
             this.name = name;
             this.category = category;
             this.quantity = quantity;
-        }
-    }
-
-    // RecyclerView Adapter
-    static class StockAdapter extends RecyclerView.Adapter<StockAdapter.ViewHolder> {
-        private List<InventoryItem> itemList;
-
-        public StockAdapter(List<InventoryItem> itemList) {
-            this.itemList = new ArrayList<>(itemList); // Prevent modifying original list
-        }
-
-        public void updateList(List<InventoryItem> newList) {
-            itemList.clear();
-            itemList.addAll(newList);
-            notifyDataSetChanged();
-        }
-
-        @NonNull
-        @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_stock, parent, false);
-            return new ViewHolder(view);
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            InventoryItem item = itemList.get(position);
-            holder.itemName.setText(item.name);
-            holder.category.setText(item.category);
-            holder.quantity.setText(String.valueOf(item.quantity));
-        }
-
-        @Override
-        public int getItemCount() {
-            return itemList.size();
-        }
-
-        static class ViewHolder extends RecyclerView.ViewHolder {
-            TextView itemName, category, quantity;
-
-            public ViewHolder(@NonNull View itemView) {
-                super(itemView);
-                itemName = itemView.findViewById(R.id.itemName);
-                category = itemView.findViewById(R.id.category);
-                quantity = itemView.findViewById(R.id.quantity);
-            }
         }
     }
 }

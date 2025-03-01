@@ -70,4 +70,9 @@
         <item>Canteen 2</item>
         <item>Canteen 3</item>
     </string-array>
+    <string-array name="category_options">
+        <item>Rice Meal</item>
+        <item>Drink</item>
+        <item>Snack</item>
+    </string-array>
 </resources>

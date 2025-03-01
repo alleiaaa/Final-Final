@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg">
+
+    <EditText
+        android:id="@+id/itemNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Name"
+        android:textColor="@color/dark"
+        android:textSize="16sp"
+        android:background="@drawable/input_bg"
+        android:padding="12dp" />
+
+    <!-- Category Dropdown -->
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_bg"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        android:popupBackground="@color/light_2.0"
+        android:entries="@array/category_options" />
+
+    <EditText
+        android:id="@+id/quantityInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:inputType="number"
+        android:textColor="@color/dark"
+        android:textSize="16sp"
+        android:background="@drawable/input_bg"
+        android:padding="12dp"
+        android:layout_marginTop="12dp" />
+
+    <!-- Stock/Waste Selection -->
+    <RadioGroup
+        android:id="@+id/radioGroupTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <RadioButton
+            android:id="@+id/radioStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock"
+            android:textColor="@color/dark"
+            android:buttonTint="@color/primary" />
+
+        <RadioButton
+            android:id="@+id/radioWaste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waste"
+            android:textColor="@color/dark"
+            android:buttonTint="@color/primary"
+            android:layout_marginStart="24dp" />
+    </RadioGroup>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:background="@drawable/button_secondary"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_primary"
+            android:backgroundTint="@color/primary"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
+
+</LinearLayout>
