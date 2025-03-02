@@ -1,4 +1,4 @@
-package com.example.seller_tapnbite_final;
+package com.example.seller_tapnbite_final.Menu;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.seller_tapnbite_final.R;
+
 import java.util.ArrayList;
 import java.util.List;
 

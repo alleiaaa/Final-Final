@@ -1,4 +1,4 @@
-package com.example.seller_tapnbite_final;
+package com.example.seller_tapnbite_final.Model;
 
 
 public class ProductModel {

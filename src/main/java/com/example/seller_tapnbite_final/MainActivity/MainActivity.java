@@ -1,4 +1,4 @@
-package com.example.seller_tapnbite_final;
+package com.example.seller_tapnbite_final.MainActivity;
 
 import android.os.Bundle;
 
@@ -6,11 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.seller_tapnbite_final.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.example.seller_tapnbite_final.fragments.OrderMain;
-import com.example.seller_tapnbite_final.fragments.InventoryMain;
-import com.example.seller_tapnbite_final.fragments.SettingMain;
+import com.example.seller_tapnbite_final.DashboardFragments.OrderMain;
+import com.example.seller_tapnbite_final.DashboardFragments.InventoryMain;
+import com.example.seller_tapnbite_final.DashboardFragments.SettingMain;
 
 public class MainActivity extends AppCompatActivity {
 

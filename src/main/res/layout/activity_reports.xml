@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:layout_marginTop="30dp"
         android:paddingBottom="16dp">
 
         <ImageButton
@@ -27,7 +28,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Sales Report"
+            android:text="Report"
             android:textSize="22sp"
             android:textStyle="bold"
             android:layout_gravity="center"
@@ -81,7 +82,26 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Total Orders Card -->
+    </LinearLayout>
+
+    <!-- Inventory Summary Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inventory Summary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#232946"
+        android:fontFamily="@font/inter_bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Rice Meals -->
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -100,16 +120,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Orders"
+                    android:text="Rice Meals"
                     android:textSize="14sp"
                     android:textColor="#404040"
                     android:fontFamily="@font/inter_medium" />
 
                 <TextView
-                    android:id="@+id/txtTotalOrders"
+                    android:id="@+id/txtTotalRiceMeal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="120"
+                    android:text="0"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/atyp_semi_bold"
@@ -117,7 +137,43 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Total Revenue Card -->
+        <!-- Drinks -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Drinks"
+                    android:textSize="14sp"
+                    android:textColor="#404040"
+                    android:fontFamily="@font/inter_medium" />
+
+                <TextView
+                    android:id="@+id/txtTotalDrinks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/atyp_semi_bold"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Snacks -->
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -135,27 +191,26 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Revenue"
+                    android:text="Snacks"
                     android:textSize="14sp"
                     android:textColor="#404040"
                     android:fontFamily="@font/inter_medium" />
 
                 <TextView
-                    android:id="@+id/txtTotalRevenue"
+                    android:id="@+id/txtTotalSnacks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="₱150,000"
+                    android:text="0"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/atyp_semi_bold"
                     android:layout_marginTop="8dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 
-    <!-- Filter Section -->
-    <include layout="@layout/filter_sales" />
-
+    <!-- Spinner for Canteen Selection -->
     <Spinner
         android:id="@+id/spinnerCanteen"
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.example.seller_tapnbite_final.fragments;
+package com.example.seller_tapnbite_final.DashboardFragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,8 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.seller_tapnbite_final.OrdersMenu;
-import com.example.seller_tapnbite_final.Reports; // Ensure this class exists!
+import com.example.seller_tapnbite_final.Menu.OrdersMenu;
+import com.example.seller_tapnbite_final.Menu.Reports; // Ensure this class exists!
 import com.example.seller_tapnbite_final.R;
 
 public class OrderMain extends Fragment {

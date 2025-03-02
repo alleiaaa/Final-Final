@@ -13,28 +13,28 @@
         android:theme="@style/Theme.Seller_TapNBite_Final"
         tools:targetApi="31" >
         <activity
-            android:name=".fragments.SnacksFragment"
+            android:name=".InventoryFragments.SnacksFragment"
             android:exported="false" />
         <activity
-            android:name=".fragments.DrinksFragment"
+            android:name=".InventoryFragments.DrinksFragment"
             android:exported="false" />
         <activity
-            android:name=".fragments.RiceMealsFragment"
+            android:name=".InventoryFragments.RiceMealsFragment"
             android:exported="false" />
         <activity
-            android:name=".InventoryMenu"
+            android:name=".Menu.InventoryMenu"
             android:exported="false" />
         <activity
-            android:name=".Transaction"
+            android:name=".Model.Transaction"
             android:exported="false" />
         <activity
-            android:name=".Reports"
+            android:name=".Menu.Reports"
             android:exported="false" />
         <activity
-            android:name=".StockMenu"
+            android:name=".Menu.StockMenu"
             android:exported="false" />
         <activity
-            android:name=".OrdersMenu"
+            android:name=".Menu.OrdersMenu"
             android:exported="false" />
         <activity
             android:name=".settingsContent.TermsnCondition"
@@ -49,13 +49,13 @@
             android:name=".settingsContent.HelpCenter"
             android:exported="false" />
         <activity
-            android:name=".fragments.SettingMain"
+            android:name=".DashboardFragments.SettingMain"
             android:exported="false" />
         <activity
-            android:name=".fragments.InventoryMain"
+            android:name=".DashboardFragments.InventoryMain"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

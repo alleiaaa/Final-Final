@@ -1,15 +1,13 @@
-package com.example.seller_tapnbite_final;
+package com.example.seller_tapnbite_final.Menu;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -18,9 +16,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.seller_tapnbite_final.fragments.DrinksFragment;
-import com.example.seller_tapnbite_final.fragments.RiceMealsFragment;
-import com.example.seller_tapnbite_final.fragments.SnacksFragment;
+import com.example.seller_tapnbite_final.Model.ProductModel;
+import com.example.seller_tapnbite_final.R;
+import com.example.seller_tapnbite_final.InventoryFragments.DrinksFragment;
+import com.example.seller_tapnbite_final.InventoryFragments.RiceMealsFragment;
+import com.example.seller_tapnbite_final.InventoryFragments.SnacksFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;

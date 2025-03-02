@@ -1,4 +1,4 @@
-package com.example.seller_tapnbite_final;
+package com.example.seller_tapnbite_final.Menu;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -7,14 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.seller_tapnbite_final.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +25,7 @@ public class StockMenu extends AppCompatActivity {
     private TextView tabStock, tabWaste;
     private RecyclerView recyclerInventory;
     private StockAdapter stockAdapter;
-    private List<InventoryItem> stockList = new ArrayList<>();
+    private static List<InventoryItem> stockList = new ArrayList<>();
     private List<InventoryItem> wasteList = new ArrayList<>();
     private boolean isStockTabSelected = true;
 
@@ -113,9 +115,8 @@ public class StockMenu extends AppCompatActivity {
         dialog.show();
     }
 
-
-    // Inventory Item Class
-    static class InventoryItem {
+    // Inventory Item Class (static so it can be accessed from Reports.java)
+    public static class InventoryItem {
         String name, category;
         int quantity;
 
@@ -124,5 +125,10 @@ public class StockMenu extends AppCompatActivity {
             this.category = category;
             this.quantity = quantity;
         }
+    }
+
+    // Method to retrieve stock list
+    public static List<InventoryItem> getStockList() {
+        return stockList;
     }
 }

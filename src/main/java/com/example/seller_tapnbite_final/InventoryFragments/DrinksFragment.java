@@ -1,4 +1,4 @@
-package com.example.seller_tapnbite_final.fragments;
+package com.example.seller_tapnbite_final.InventoryFragments;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -18,12 +18,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.seller_tapnbite_final.R;
 import com.example.seller_tapnbite_final.ProductAdapter;
-import com.example.seller_tapnbite_final.ProductModel;
+import com.example.seller_tapnbite_final.Model.ProductModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RiceMealsFragment extends Fragment implements ProductAdapter.OnProductActionListener {
+public class DrinksFragment extends Fragment implements ProductAdapter.OnProductActionListener {
     private RecyclerView recyclerViewProducts;
     private ProductAdapter productAdapter;
     private List<ProductModel> productList;
@@ -46,7 +46,7 @@ public class RiceMealsFragment extends Fragment implements ProductAdapter.OnProd
 
     public void addProduct(String name, double price) {
         ProductModel newProduct = new ProductModel(name, price, "Rice Meals", 15, true);
-        newProduct.setImageResourceId(R.drawable.adobo); // Default image, change as needed
+        newProduct.setImageResourceId(R.drawable.adobo);
         productAdapter.addProduct(newProduct);
     }
 

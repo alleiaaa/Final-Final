@@ -1,4 +1,4 @@
-package com.example.seller_tapnbite_final.fragments;
+package com.example.seller_tapnbite_final.DashboardFragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,8 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.seller_tapnbite_final.StockMenu;
-import com.example.seller_tapnbite_final.InventoryMenu;
+import com.example.seller_tapnbite_final.Menu.StockMenu;
+import com.example.seller_tapnbite_final.Menu.InventoryMenu;
 import com.example.seller_tapnbite_final.R;
 
 public class InventoryMain extends Fragment {

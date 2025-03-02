@@ -1,4 +1,4 @@
-package com.example.seller_tapnbite_final.fragments;
+package com.example.seller_tapnbite_final.DashboardFragments;
 
 import android.app.AlertDialog;
 import android.content.Intent;
