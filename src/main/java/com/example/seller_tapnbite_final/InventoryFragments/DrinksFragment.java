@@ -71,9 +71,8 @@ public class DrinksFragment extends Fragment implements ProductAdapter.OnProduct
     }
 
     public void addProduct(ProductModel product) {
-        // Set a default image if none is specified
         if (product.getImageResourceId() == 0) {
-            product.setImageResourceId(R.drawable.adobo); // or another appropriate default
+            product.setImageResourceId(R.drawable.adobo);
         }
         productList.add(product);
         productAdapter.notifyItemInserted(productList.size() - 1);

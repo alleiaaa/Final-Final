@@ -46,7 +46,7 @@ public class RiceMealsFragment extends Fragment implements ProductAdapter.OnProd
 
     public void addProduct(String name, double price) {
         ProductModel newProduct = new ProductModel(name, price, "Rice Meals", 15, true);
-        newProduct.setImageResourceId(R.drawable.adobo); // Default image, change as needed
+        newProduct.setImageResourceId(R.drawable.adobo);
         productAdapter.addProduct(newProduct);
     }
 
@@ -71,7 +71,7 @@ public class RiceMealsFragment extends Fragment implements ProductAdapter.OnProd
     }
 
     public void addProduct(ProductModel product) {
-        // Set a default image if none is specified
+
         if (product.getImageResourceId() == 0) {
             product.setImageResourceId(R.drawable.adobo); // or another appropriate default
         }

@@ -32,9 +32,9 @@ public class OrderMain extends Fragment {
             });
         }
 
-        // Reports Card Intent - Fixed
-        CardView reportCard = view.findViewById(R.id.reportCard); // Use correct variable name
-        if (reportCard != null) { // Use the correct variable
+        // Reports Card Intent
+        CardView reportCard = view.findViewById(R.id.reportCard);
+        if (reportCard != null) {
             reportCard.setOnClickListener(v -> {
                 Intent intent = new Intent(getActivity(), Reports.class);
                 startActivity(intent);
