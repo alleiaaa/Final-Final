@@ -6,6 +6,7 @@ import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
@@ -44,6 +45,9 @@ public class InventoryMenu extends AppCompatActivity {
 
         ImageView addIcon = findViewById(R.id.addIcon);
         addIcon.setOnClickListener(v -> showAddProductDialog());
+
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
     }
 
     private void showAddProductDialog() {

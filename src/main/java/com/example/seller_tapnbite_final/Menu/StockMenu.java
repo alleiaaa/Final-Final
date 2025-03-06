@@ -39,6 +39,9 @@ public class StockMenu extends AppCompatActivity {
         recyclerInventory = findViewById(R.id.recyclerInventory);
         ImageButton addItemButton = findViewById(R.id.addItem);
 
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
+
         recyclerInventory.setLayoutManager(new LinearLayoutManager(this));
 
         // Load Sample Data BEFORE setting the adapter

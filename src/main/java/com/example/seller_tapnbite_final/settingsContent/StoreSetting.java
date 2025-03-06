@@ -1,8 +1,9 @@
 package com.example.seller_tapnbite_final.settingsContent;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.seller_tapnbite_final.R;
 import com.google.android.material.textfield.TextInputEditText;
@@ -13,35 +14,34 @@ public class StoreSetting extends AppCompatActivity {
 
     private TextInputEditText inputStoreName, inputCanteen, inputManager;
     private Button btnSaveChanges;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_store_setting); // Replace with your actual XML file name
+        setContentView(R.layout.activity_store_setting);
 
-        // Initialize fields
+        sharedPreferences = getSharedPreferences("StorePrefs", MODE_PRIVATE);
+
         inputStoreName = findViewById(R.id.inputStoreName);
         inputCanteen = findViewById(R.id.inputCanteenLocation);
         inputManager = findViewById(R.id.inputManager);
         btnSaveChanges = findViewById(R.id.saveChangesButton);
 
-        // Set default values (fetch from database or shared preferences if needed)
-        inputStoreName.setText("ABC Mart");
-        inputCanteen.setText("1");
-        inputManager.setText("John Doe");
+        loadSavedData();
 
-        // Make fields editable when clicked
         enableEditing(inputStoreName);
         enableEditing(inputCanteen);
         enableEditing(inputManager);
 
-        // Save changes when button is clicked
         btnSaveChanges.setOnClickListener(v -> saveChanges());
+
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
     }
 
     private void enableEditing(TextInputEditText editText) {
         editText.setFocusableInTouchMode(true);
-        editText.setOnClickListener(v -> editText.setFocusableInTouchMode(true));
     }
 
     private void saveChanges() {
@@ -49,8 +49,22 @@ public class StoreSetting extends AppCompatActivity {
         String newCanteen = inputCanteen.getText().toString().trim();
         String newManager = inputManager.getText().toString().trim();
 
-        // TODO: Save the updated values to database or shared preferences
-        // For now, just show a confirmation
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("store_name", newStoreName);
+        editor.putString("canteen_location", newCanteen);
+        editor.putString("manager_name", newManager);
+        editor.apply();
+
         btnSaveChanges.setText("Changes Saved!");
+    }
+
+    private void loadSavedData() {
+        String storeName = sharedPreferences.getString("store_name", "ABC Mart");
+        String canteenLocation = sharedPreferences.getString("canteen_location", "1");
+        String managerName = sharedPreferences.getString("manager_name", "John Doe");
+
+        inputStoreName.setText(storeName);
+        inputCanteen.setText(canteenLocation);
+        inputManager.setText(managerName);
     }
 }

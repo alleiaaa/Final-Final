@@ -86,11 +86,9 @@ public class SettingMain extends Fragment {
     }
 
     private void handlePrivacyPolicy() {
-
         Intent intent = new Intent(getActivity(), PrivacyPolicy.class);
         startActivity(intent);
     }
-
 
     private void handleChangeStoreStatus() {
         new AlertDialog.Builder(getActivity())
@@ -130,6 +128,14 @@ public class SettingMain extends Fragment {
     }
 
     private void handleLogout() {
-        Toast.makeText(getActivity(), "Logged out successfully", Toast.LENGTH_SHORT).show();
+        new AlertDialog.Builder(getActivity())
+                .setTitle("Logout")
+                .setMessage("Are you sure you want to log out?")
+                .setPositiveButton("Yes", (dialog, which) -> {
+                    Toast.makeText(getActivity(), "Logged out successfully", Toast.LENGTH_SHORT).show();
+                    getActivity().finishAffinity(); // Close all activities and exit the app
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 }

@@ -168,57 +168,6 @@
                                 android:layout_marginTop="4dp" />
                         </LinearLayout>
 
-                        <!-- This Week Sales -->
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="This Week"
-                                android:textSize="14sp"
-                                android:textColor="#757575"
-                                android:fontFamily="@font/inter_regular" />
-
-                            <TextView
-                                android:id="@+id/txtWeekSales"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="₱22,400"
-                                android:textSize="16sp"
-                                android:textColor="#232946"
-                                android:fontFamily="@font/inter_medium"
-                                android:layout_marginTop="4dp" />
-                        </LinearLayout>
-
-                        <!-- This Month Sales -->
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="This Month"
-                                android:textSize="14sp"
-                                android:textColor="#757575"
-                                android:fontFamily="@font/inter_regular" />
-
-                            <TextView
-                                android:id="@+id/txtMonthSales"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="₱50,000"
-                                android:textSize="16sp"
-                                android:textColor="#232946"
-                                android:fontFamily="@font/inter_medium"
-                                android:layout_marginTop="4dp" />
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
